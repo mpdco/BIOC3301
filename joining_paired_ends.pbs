@@ -17,8 +17,8 @@ join_paired_ends.py \
 -m SeqPrep \
 -f ~/2018_02_smb/Read1.fastq.gz \
 -r ~/2018_02_smb/Read2.fastq.gz \
--b ~/2018_02_smb/Index.tsv \
--o ~/home/cbmucl06/SeqPrep_joined
+-b ~/2018_02_smb/Index.fastq.gz \
+-o ~/SeqPrep_joined
 
 #Deactivating environment
 source deactivate
