@@ -1,11 +1,12 @@
 #!/bin/bash
-#SBATCH -t 4:00:00
+#SBATCH -t 2:00:00
 #SBATCH -n 24
 #SBATCH -p normal
 
 #Load modules and qiime
 module load eb
 module load Miniconda2
+
 #Load virtual environment
 source activate qiime1
 
@@ -19,7 +20,6 @@ split_libraries_fastq.py \
 -o ~/Split_libraries_Q19 \
 -m ~/2018_02_smb/map_complete.tsv \
 -q 19 \
---store_qual_scores \
 --rev_comp_barcode \
 --rev_comp_mapping_barcodes
 
