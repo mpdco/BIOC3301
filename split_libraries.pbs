@@ -1,14 +1,14 @@
 #!/bin/bash
-#SBATCH -t 2:00:00
+#SBATCH -t 4:00:00
 #SBATCH -n 24
-#SBATCH -p short
+#SBATCH -p normal
 
 #Load modules and qiime
 module load eb
 module load Miniconda2
-
 #Load virtual environment
 source activate qiime1
+
 export TMPDIR=~/qiime_tmp
 
 #Splitting libraries
