@@ -20,7 +20,7 @@ core_diversity_analyses.py \
 -m ~/2018_02_smb/map_complete.tsv \
 -e 35000 \
 -t ~/SILVA_database/97_otus.tre \
--c '#SampleID',BarcodeSequence,LinkerPrimerSequence,SampleType,Year,Month,Day,SampleLongitude,SampleLatitude,SampleSiteDescription,SampleDepth,SampleFootFall,SampleVegetation,SampleWeatherTemp,SampleMoisture,SampleDescription,SamplePh,SamplePotassium,SampleNitrogen,SamplePhosphorus,Description \
+-c #SampleID,BarcodeSequence,LinkerPrimerSequence,SampleType,Year,Month,Day,SampleLongitude,SampleLatitude,SampleSiteDescription,SampleDepth,SampleFootFall,SampleVegetation,SampleWeatherTemp,SampleMoisture,SampleDescription,SamplePh,SamplePotassium,SampleNitrogen,SamplePhosphorus,Description \
 -a \
 -O 24
 
