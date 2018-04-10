@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -t 3:00:00
+#SBATCH -t 1:00:00
 #SBATCH -n 24
-#SBATCH -p normal
+#SBATCH -p short
 
 #Load modules and qiime
 module load eb
@@ -16,7 +16,7 @@ echo "Picking OTUS with closed reference"
 pick_closed_reference_otus.py \
 -i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
 -o ~/Close_ref_otus_Q25/ \
--r ~/SILVA_database/97_otus_16S.fasta \
+-r ~/SILVA_database/silva_132_97_16S.fna \
 -a \
 -O 24
 
