@@ -12,12 +12,12 @@ source activate qiime1
 
 export TMPDIR=~/qiime_tmp
 
-#Picking OTUS (closed reference)
+#Analyse core Diversity
 echo "Analysing core diversity"
 core_diversity_analyses.py \
 -i ~/Close_ref_otus_Q25_contax7/otu_table.biom \
 -o ~/Close_ref_otus_Q25_contax7/Diversity_analysis \
--m ~/2018_02_smb/map_complete_corrected.tsv \
+-m ~/2018_02_smb/map_complete.tsv \
 -e 35000 \
 -t ~/SILVA_database/97_otus.tre \
 -c SampleType,Year,Month,Day,SampleLongitude,SampleLatitude,SampleSiteDescription,SampleDepth,SampleFootFall,SampleVegetation,SampleWeatherTemp,SampleMoisture,SampleDescription,SamplePh,SamplePotassium,SampleNitrogen,SamplePhosphorus,Description \
