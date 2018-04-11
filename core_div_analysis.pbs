@@ -20,6 +20,7 @@ core_diversity_analyses.py \
 -m ~/2018_02_smb/map_complete.tsv \
 -e 35000 \
 -t ~/SILVA_database/97_otus.tre \
+-a \
 -O 24
 echo "Analysing core diversity... Complete!"
 
