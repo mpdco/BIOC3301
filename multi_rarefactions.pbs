@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -t 3:00:00
+#SBATCH -n 24
+#SBATCH -p normal
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Multiple Rarefaction
+echo "Creating Multiple rarefactions"
+parallel_multiple_rarefactions.py \
+-i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/otu_table.biom \
+-o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/Rarefied_tables \
+-m 35000 \
+-x 195000 \
+-s 20000 \
+-a \
+-O 24
+
+#Deactivating environment
+source deactivate
