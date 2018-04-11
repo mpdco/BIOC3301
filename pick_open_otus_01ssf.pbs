@@ -17,7 +17,6 @@ pick_open_reference_otus.py \
 -i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
 -o ~/Open_ref_otus_Q25_majtax7_01ssf/ \
 -r ~/SILVA_database/silva_132_97_16S.fna \
--t ~/SILVA_database/Taxonomy_files/majority_taxonomy_7_levels.txt
 -m uclust \
 -s 0.1 \
 --prefilter_percent_id 0.0 \
