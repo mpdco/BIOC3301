@@ -15,13 +15,13 @@ export TMPDIR=~/qiime_tmp
 #Analyse core Diversity
 echo "Analysing core diversity"
 core_diversity_analyses.py \
--i ~/Close_ref_otus_Q25_contax7/otu_table.biom \
--o ~/Close_ref_otus_Q25_contax7/Diversity_analysis \
+-i ~/Picked_OTUs/Close_ref_otus_Q25_majtax7/otu_table.biom \
+-o ~/Picked_OTUs/Close_ref_otus_Q25_mantax7/Core_diversity_analysis \
 -m ~/2018_02_smb/map_complete.tsv \
 -e 35000 \
 -t ~/SILVA_database/97_otus.tre \
--a \
 -O 24
+echo "Analysing core diversity... Complete!"
 
 #Deactivating environment
 source deactivate
