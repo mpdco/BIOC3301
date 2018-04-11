@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH -t 3:00:00
+#SBATCH -n 24
+#SBATCH -p normal
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Picking OTUS (open reference)
+echo "Picking OTUS with open reference"
+pick_open_reference_otus.py \
+-i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
+-o ~/Open_ref_otus_Q25_01ssf/ \
+-r ~/SILVA_database/silva_132_97_16S.fna \
+-m uclust \
+-s 0.001 \
+--prefilter_percent_id 0.0 \
+-a \
+-O 24
+
+#Deactivating environment
+source deactivate
