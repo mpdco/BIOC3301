@@ -15,7 +15,7 @@ export TMPDIR=~/qiime_tmp
 echo "Picking OTUS with open reference"
 pick_open_reference_otus.py \
 -i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
--o ~/Open_ref_otus_Q25_01ssf/ \
+-o ~/Open_ref_otus_Q25_0001ssf/ \
 -r ~/SILVA_database/silva_132_97_16S.fna \
 -m uclust \
 -s 0.001 \
