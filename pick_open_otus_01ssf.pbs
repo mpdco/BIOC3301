@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -t 3:00:00
+#SBATCH -t 1:00:00
 #SBATCH -n 24
-#SBATCH -p normal
+#SBATCH -p short
 
 #Load modules and qiime
 module load eb
@@ -15,11 +15,10 @@ export TMPDIR=~/qiime_tmp
 echo "Picking OTUS with open reference"
 pick_open_reference_otus.py \
 -i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
--o ~/Open_ref_otus_Q25_01ssf/ \
--r ~/SILVA_database/silva_132_97_16S.fna \
--m uclust \
 -s 0.1 \
 --prefilter_percent_id 0.0 \
+-o ~/Open_ref_otus_Q25_s01 \
+-r ~/SILVA_database/silva_132_97_16S.fna \
 -a \
 -O 24
 
