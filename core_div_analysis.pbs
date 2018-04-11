@@ -16,7 +16,7 @@ export TMPDIR=~/qiime_tmp
 echo "Analysing core diversity"
 core_diversity_analyses.py \
 -i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/otu_table.biom \
--o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/Core_diversity_analysis_e100000 \
+-o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/Core_diversity_analysis_e150000 \
 -m ~/2018_02_smb/map_complete.tsv \
 -e 150000 \
 -t ~/SILVA_database/97_otus.tre \
