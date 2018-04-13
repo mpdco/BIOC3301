@@ -18,7 +18,7 @@ make_otu_heatmap.py \
 -o ~/Picked_OTUs/Close_ref_otus_Q25/OTU_heatmap.png \
 -t ~/SILVA_database/97_otus.tre \
 -m ~/2018_02_smb/map_complete.tsv \
---color_scheme plasma \
+--color_scheme autumn 
 
 #Deactivating environment
 source deactivate
