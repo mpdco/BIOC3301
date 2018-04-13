@@ -14,10 +14,10 @@ export TMPDIR=~/qiime_tmp
 #Identify chimeric sequences
 echo "Identifying chimeric sequences"
 identify_chimeric_seqs.py \
--m ~/usearch61 \
+-m usearch61 \
 -i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
 -o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/usearch_checked_chimeras/ \
--r ~/SILVA_database/silva_132_97_16S.fna \
+-r ~/SILVA_database/silva_132_97_16S.fna 
 
 echo "Identifying chimeric sequences... Completed"
 
