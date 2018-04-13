@@ -17,10 +17,11 @@ identify_chimeric_seqs.py \
 -m usearch61 \
 -i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
 -o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/chimeric_seqs_usearch.txt \
+--reference_seqs_fp ~/SILVA_database/silva_132_97_16S.fna \
 --usearch61_minh 0.3 \
 --usearch61_mindiffs 3 \
 --usearch61_mindiv 1 \
---usearch61_xn 5 \
+--usearch61_xn 5 
 
 echo "Identifying chimeric sequences... Completed"
 
