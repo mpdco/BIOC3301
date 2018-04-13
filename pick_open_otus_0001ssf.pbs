@@ -17,7 +17,6 @@ pick_open_reference_otus.py \
 -i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
 -o ~/Open_ref_otus_Q25_s0001/ \
 -r ~/SILVA_database/silva_132_97_16S.fna \
--s 0.001 \
 -a \
 -O 24
 
