@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Normalise table
+echo "Normalizing OTU table"
+normalize_table.py \
+-i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/otu_table.biom \
+-a CSS \
+-o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/CSS_normalized_otu_table.biom 
+
+#Deactivating environment
+source deactivate
