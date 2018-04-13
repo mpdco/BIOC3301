@@ -15,7 +15,7 @@ export TMPDIR=~/qiime_tmp
 echo "Collating alpha diversity"
 collate_alpha.py \
 -i /home/cbmucl06/Picked_OTUs/Close_ref_otus_Q25_contax7/Alpha_div_rarefied_tables \
--o /home/cbmucl06/Picked_OTUs/Close_ref_otus_Q25_contax7/Collated_alpha \
+-o /home/cbmucl06/Picked_OTUs/Close_ref_otus_Q25_contax7/Collated_alpha_results \
 
 #Deactivating environment
 source deactivate
