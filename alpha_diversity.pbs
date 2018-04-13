@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Parallel alpha diversoty
 echo "Calculating alpha diversity"
 parallel_alpha_diversity.py \
--i /home/cbmucl06/Picked_OTUs/Close_ref_otus_Q25_contax7/Rarefied_otu_tables/
--o /home/cbmucl06/Picked_OTUs/Close_ref_otus_Q25_contax7/Alpha_div_rarefied_tables
+-i /home/cbmucl06/Picked_OTUs/Close_ref_otus_Q25_contax7/Rarefied_otu_tables/ \
+-o /home/cbmucl06/Picked_OTUs/Close_ref_otus_Q25_contax7/Alpha_div_rarefied_tables \
 -t ~/SILVA_database/97_otus.tre \
 -m observed_otus,chao1,PD_whole_tree,goods_coverage \
 -O 24
