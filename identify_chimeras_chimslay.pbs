@@ -15,7 +15,7 @@ export TMPDIR=~/qiime_tmp
 echo "Identifying chimeric sequences with ChimeraSlayer"
 parallel_identify_chimeric_seqs.py \
 -i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/ \
--o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/identified_chimeras.txt \
+-o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/chimeric_seqs_chimslayer.txt \
 -a ~/SILVA_database/97_alignment.fna \
 -r ~/SILVA_database/silva_132_97_16S.fna \
 -O 24
