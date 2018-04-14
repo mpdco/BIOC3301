@@ -16,7 +16,8 @@ echo "Plotting alpha rarefactions"
 make_rarefaction_plots.py \
 -i /home/cbmucl06/Close_ref_otus_chimerafree/Results/Collated_alpha_analysis \
 -o /home/cbmucl06/Close_ref_otus_chimerafree/Results/Alpha_plots \
--m ~/2018_02_smb/map_complete.tsv 
+-m ~/2018_02_smb/map_complete.tsv \
+-g pdf
 
 #Deactivating environment
 source deactivate
