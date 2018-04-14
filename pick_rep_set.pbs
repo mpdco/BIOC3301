@@ -15,7 +15,7 @@ export TMPDIR=~/qiime_tmp
 echo "Picking representative set of sequences"
 pick_rep_set.py \
 -i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/uclust_ref_picked_otus/seqs_otus.txt \
--o /home/cbmucl06/Close_ref_otus_Q25_contax7/rep_seqs.fna \
+-o /home/cbmucl06/Close_ref_otus_Q25_contax7/ \
 --reference_seqs_fp ~/SILVA_database/silva_132_97_16S.fna 
 
 #Deactivating environment
