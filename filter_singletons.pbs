@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -t 3:00:00
+#SBATCH -n 24
+#SBATCH -p normal
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Filter singletons
+echo "Filtering singletons"
+filter_otus_from_otu_table.py \
+-i /home/cbmucl06/Close_ref_otus_chimerafree/otu_table.biom \
+-o /home/cbmucl06/Close_ref_otus_chimerafree/singletonfree_otu_table.biom \
+-n 2
