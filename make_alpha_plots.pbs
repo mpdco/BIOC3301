@@ -18,7 +18,8 @@ make_rarefaction_plots.py \
 -o /home/cbmucl06/Close_ref_otus_chimerafree/Results/Alpha_plots \
 -m ~/2018_02_smb/map_complete.tsv \
 -g pdf \
---generate_average_tables
+-d 100 \
+-y 125000
 
 #Deactivating environment
 source deactivate
