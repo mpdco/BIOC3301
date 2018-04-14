@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -t 3:00:00
+#SBATCH -n 24
+#SBATCH -p normal
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Filter chimeric sequences
+echo "Filtering chimeras"
+filter_fasta.py \
+-f ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
+-o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/seqs_chimeras_filtered.fna \
+-s ~/Picked_OTUs/Close_ref_otus_Q25_contax7/chimeric_seqs_usearch/chimeras.txt \
+-n
+
+echo "Filtering fasta sequences...completed."
