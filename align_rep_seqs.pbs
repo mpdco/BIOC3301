@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Align representative sequences
+echo "Aligning representative sequences"
+parallel_align_seqs_pynast.py \
+-i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/uclust_rep_set.fasta \
+-o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/pynast_aligned_seqs \
+-t ~/SILVA_database/97_alignment.fna \
+-O 24
+
+#Deactivating environment
+source deactivate
