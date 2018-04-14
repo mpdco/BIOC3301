@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -t 3:00:00
+#SBATCH -t 1:00:00
 #SBATCH -n 24
-#SBATCH -p normal
+#SBATCH -p short
 
 #Load modules and qiime
 module load eb
@@ -18,8 +18,6 @@ make_rarefaction_plots.py \
 -o /home/cbmucl06/Close_ref_otus_chimerafree/Results/Alpha_plots \
 -m ~/2018_02_smb/map_complete.tsv \
 -g pdf \
--d 100 \
--y 130000 \
 --generate_average_tables
 
 #Deactivating environment
