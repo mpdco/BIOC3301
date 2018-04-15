@@ -15,7 +15,7 @@ export TMPDIR=~/qiime_tmp
 echo "Creating Multiple rarefactions"
 parallel_multiple_rarefactions.py \
 -i /home/cbmucl06/Close_ref_otus_chimerafree/outliersingletonfree_otu_table.biom \
--o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/Rarefied_otu_tables \
+-o /home/cbmucl06/Close_ref_otus_chimerafree/Rarefied_otu_tables \
 -m 0 \
 -x 120000 \
 -s 20000 \
