@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Compute core microbiome
+echo "Computing core microbiome"
+compute_core_microbiome.py \
+-i home/cbmucl06/Close_ref_otus_chimerafree/outliersingletonfree_otu_table.biom \
+-o home/cbmucl06/Close_ref_otus_chimerafree/Core_microbiome \
+--min_fraction_for_core 0.9 \
+--num_fraction_for_core_steps 20
+
+echo "Computing core microbiome... complete!"
+
+#Deactivating environment
+source deactivate
