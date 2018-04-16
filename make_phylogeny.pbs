@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Make phylogeny
+echo "Making phylogeny"
+parallel_align_seqs_pynast.py \
+-i home/cbmucl06/Close_ref_otus_chimerafree/Aligned_repr_seqs \
+-o chimera_free_tree.tre 
+echo "Making phylogeny... complete!"
+
+#Deactivating environment
+source deactivate
