@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Align representative sequences
 echo "Aligning representative sequences"
 align_seqs.py \
--i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/uclust_rep_set.fasta \
--o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/aligned_seqs \
+-i /home/cbmucl06/Close_ref_otus_chimerafree/rep_seqs_chimera_otus.fna \
+-o /home/cbmucl06/Close_ref_otus_chimerafree/Aligned_repr_seqs \
 -t ~/SILVA_database/97_alignment.fna
 
 #Deactivating environment
