@@ -15,7 +15,9 @@ export TMPDIR=~/qiime_tmp
 echo "Assigning taxonomy"
 assign_taxonomy.py \
 -i /home/cbmucl06/Close_ref_otus_chimerafree/rep_seqs_chimera_otus.fna \
--o /home/cbmucl06/Close_ref_otus_chimerafree/Assigned_taxonomy 
+-o /home/cbmucl06/Close_ref_otus_chimerafree/Assigned_taxonomy \
+-r ~/SILVA_database/silva_132_97_16S.fna \
+-t /home/cbmucl06/SILVA_database/Taxonomy_files/consensus_taxonomy_7_levels.txt 
 
 echo "Assigning taxonomy... complete!"
 
