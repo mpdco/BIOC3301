@@ -11,12 +11,15 @@ source activate qiime1
 
 export TMPDIR=~/qiime_tmp
 
-#Pick representative set of sequences
-echo "Picking representative set of sequences"
-pick_rep_set.py \
--i /home/cbmucl06/Close_ref_otus_chimerafree/uclust_ref_picked_otus/seqs_chimeras_filtered_otus.txt \
+#Assign taxonomy
+echo "Assigning taxonomy"
+assign_taxonomy.py \
+-i /home/cbmucl06/Close_ref_otus_chimerafree/rep_seqs_chimera_otus.fna \
+-o /home/cbmucl06/Close_ref_otus_chimerafree/Assigned_taxonomy \
 -r ~/SILVA_database/silva_132_97_16S.fna \
--o /home/cbmucl06/Close_ref_otus_chimerafree/rep_seqs_chimera_otus.fna
+-t /home/cbmucl06/SILVA_database/Taxonomy_files/consensus_taxonomy_7_levels.txt 
+
+echo "Assigning taxonomy... complete!"
 
 #Deactivating environment
 source deactivate
