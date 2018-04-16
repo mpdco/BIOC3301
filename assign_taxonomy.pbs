@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Assign taxonomy
+echo "Assigning taxonomy"
+assign_taxonomy.py \
+-i /home/cbmucl06/Close_ref_otus_chimerafree/rep_seqs_chimera_otus.fna \
+-o /home/cbmucl06/Close_ref_otus_chimerafree/Assigned_taxonomy 
+
+echo "Assigning taxonomy... complete!"
+
+#Deactivating environment
+source deactivate
