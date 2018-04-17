@@ -15,7 +15,7 @@ export TMPDIR=~/qiime_tmp
 #Normalise table
 echo "Normalizing OTU table"
 normalize_table.py \
--i ~/Close_ref_otus_chimerafree/otu_table.biom \
+-i /home/cbmucl06/Close_ref_otus_chimerafree/OTU_summary_tables/outliersingletonfree_otu_table.biom \
 -a CSS \
 -o ~/Close_ref_otus_chimerafree/CSS_normalized_otu_table.biom 
 
