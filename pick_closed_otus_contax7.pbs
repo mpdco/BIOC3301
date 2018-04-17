@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 1:00:00
+#SBATCH -t 01:00:00
 #SBATCH -n 24
 #SBATCH -p short
 
@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Picking OTUS (closed reference)
 echo "Picking OTUS with closed reference"
 pick_closed_reference_otus.py \
--i /home/cbmucl06/Split_Q25_conv1/seqs.fna \
+-i /home/cbmucl06/Farm_data/FASTA_files/organic_farm_data.fna \
 -o ~/Close_ref_otus_org1/ \
 -r ~/SILVA_database/silva_132_97_16S.fna \
 -a \
