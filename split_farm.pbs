@@ -18,6 +18,7 @@ split_libraries_fastq.py \
 --barcode_type not-barcoded \
 --sample_ids organic.control \
 -o ~/Split_libraries_Q25_farm \
+--phred_offset 33 \
 -q 25
 
 #Deactivating environment
