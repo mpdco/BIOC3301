@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Splitting libraries
 echo "Split libraries"
 split_libraries_fastq.py \
--i /home/cbmucl06/org_s1.fastq \
+-i /home/cbmucl06/org_s2.fastq \
 --barcode_type not-barcoded \
 --sample_ids organic1 \
 -o ~/Split_Q25_organic1 \
