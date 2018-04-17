@@ -17,7 +17,7 @@ split_libraries_fastq.py \
 -i /home/cbmucl06/org_s2.fastq \
 --barcode_type not-barcoded \
 --sample_ids organic1 \
--o ~/Split_Q25_organic1 \
+-o ~/Split_Q25_organic2 \
 --phred_offset 33 \
 -q 24
 
