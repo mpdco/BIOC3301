@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p normal
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Splitting libraries
+echo "Split libraries"
+split_libraries_fastq.py \
+-i /home/cbmucl06/Farm_data/organic_farm_data.fastq \
+--barcode_type not-barcoded \
+--sample_ids organic.control \
+-o ~/Split_libraries_Q25_farm \
+-q 25
+
+#Deactivating environment
+source deactivate
