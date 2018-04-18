@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Picking OTUS (closed reference)
 echo "Picking OTUS with closed reference"
 pick_closed_reference_otus.py \
--i /home/cbmucl06/Split_libraries_Q25_farm/seqs.fna \
--o ~/Close_ref_otus_compost/ \
+-i /home/cbmucl06/Split_libraries_Q19_farm/seqs.fna \
+-o ~/Close_ref_otus_compost_Q19/ \
 -r ~/SILVA_database/silva_132_97_16S.fna \
 -a \
 -O 24
