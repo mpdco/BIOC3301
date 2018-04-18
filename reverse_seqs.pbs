@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Reverse sequences
+echo "Reversing sequences"
+adjust_seq_orientation.py \
+-i /home/cbmucl06/Split_libraries_Q25_farm/seqs.fna
+
+#Deactivating environment
+source deactivate
