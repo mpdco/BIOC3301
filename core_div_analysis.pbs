@@ -19,7 +19,7 @@ core_diversity_analyses.py \
 -o /home/cbmucl06/Close_ref_otus_compost_Q25_rev/CDA/ \
 -e 3700 \
 -t ~/SILVA_database/97_otus.tre \
--m ~/2018_02_smb/map_complete.tsv \
+-m ~/farm_mapping.tsv \
 -a \
 -O 24
 echo "Analysing core diversity... Complete!"
