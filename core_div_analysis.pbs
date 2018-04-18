@@ -17,7 +17,7 @@ echo "Analysing core diversity"
 core_diversity_analyses.py \
 -i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/otu_table.biom \
 -o ~/Core_div_farm \
--e 150000 \
+-e 35000 \
 -t ~/SILVA_database/97_otus.tre \
 -a \
 -O 24
