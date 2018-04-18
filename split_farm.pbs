@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -t 00:20:00
+#SBATCH -t 1:00:00
 #SBATCH -n 24
-#SBATCH -p short
+#SBATCH -p normal
 
 #Load modules and qiime
 module load eb
@@ -13,13 +13,10 @@ export TMPDIR=~/qiime_tmp
 
 #Splitting libraries
 echo "Split libraries"
-split_libraries_fastq.py \
--i /home/cbmucl06/conv_s1.fastq \
---barcode_type not-barcoded \
---sample_ids conv1 \
--o ~/Split_Q25_conv1 \
---phred_offset 33 \
--q 24
+multiple_split_libraries_fastq.py \
+-i /home/cbmucl06/Farm_data/ \
+-p ~/split_libs_param.txt \
+-o ~/Split_libraries_Q25_farm
 
 #Deactivating environment
 source deactivate
