@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -t 03:00:00
+#SBATCH -n 24
+#SBATCH -p normal
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Picking OTUS (closed reference)
+echo "Picking OTUS with closed reference"
+pick_closed_reference_otus.py \
+-i /home/cbmucl06/Split_libraries_Q25_farm/seqs.fna \
+-o ~/Close_ref_otus_compost_Q25/ \
+-r ~/SILVA_database/silva_132_97_16S.fna \
+-p ~/Parameter_files/closed_ref_rev.txt \
+--parallel \
+-O 24
+
+#Deactivating environment
+source deactivate
