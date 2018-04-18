@@ -19,6 +19,7 @@ core_diversity_analyses.py \
 -o ~/Close_ref_otus_chimerafree/CDA_normalized \
 -e 1691 \
 -t ~/SILVA_database/97_otus.tre \
+-m map_complete.tsv \
 -a \
 -O 24
 echo "Analysing core diversity... Complete!"
