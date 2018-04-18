@@ -7,9 +7,8 @@
 module load eb
 module load Miniconda2
 #Load virtual environment
-source activate qiime1
-
 export TMPDIR=~/qiime_tmp
+source activate qiime1
 
 #Splitting libraries
 echo "Split libraries"
