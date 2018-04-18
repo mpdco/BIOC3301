@@ -17,8 +17,8 @@ pick_closed_reference_otus.py \
 -i /home/cbmucl06/Split_libraries_Q25_farm/seqs.fna \
 -o ~/Close_ref_otus_compost_Q25/ \
 -r ~/SILVA_database/silva_132_97_16S.fna \
--p ~/Parameter_files/closed_ref_rev.txt \ 
--a \
+-p ~/Parameter_files/closed_ref_rev.txt \
+--parallel \
 -O 24
 
 #Deactivating environment
