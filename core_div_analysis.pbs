@@ -15,11 +15,11 @@ export TMPDIR=~/qiime_tmp
 #Analyse core Diversity
 echo "Analysing core diversity"
 core_diversity_analyses.py \
--i /home/cbmucl06/Farm_cloref_OTUs_SILVA/otu_table.biom \
--o /home/cbmucl06/Farm_cloref_OTUs_SILVA/CDA/ \
+-i /home/cbmucl06/Chimerafree_cloref_OTUs_SILVA/CSS_normalized_otu_table.biom \
+-o /home/cbmucl06/Chimerafree_cloref_OTUs_SILVA/CDA_normalized \
 -e 3700 \
 -t ~/SILVA_database/97_otus.tre \
--m ~/farm_mapping.tsv \
+-m /home/cbmucl06/Raw_data/Park_data/map_complete.tsv \
 -a \
 -O 24
 echo "Analysing core diversity... Complete!"
