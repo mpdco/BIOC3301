@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 1:00:00
+#SBATCH -t 01:00:00
 #SBATCH -n 24
 #SBATCH -p short
 
@@ -13,8 +13,8 @@ source activate qiime1
 #Splitting libraries
 echo "Split libraries"
 multiple_split_libraries_fastq.py \
--i /home/cbmucl06/Farm_data/ \
--p ~/split_libs_param.txt \
+-i /home/cbmucl06/Farm_data/Compost_sampes \
+-p ~/Parameter_files/split_libs_param.txt \
 -o ~/Split_libraries_Q25_farm
 
 #Deactivating environment
