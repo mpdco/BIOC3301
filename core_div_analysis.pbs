@@ -17,7 +17,7 @@ echo "Analysing core diversity"
 core_diversity_analyses.py \
 -i /home/cbmucl06/Close_ref_otus_chimerafree/CSS_normalized_otu_table.biom \
 -o ~/Close_ref_otus_chimerafree/CDA_normalized \
--e 3807 \
+-e 1691 \
 -t ~/SILVA_database/97_otus.tre \
 -a \
 -O 24
