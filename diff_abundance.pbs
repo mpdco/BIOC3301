@@ -6,6 +6,7 @@
 #Load modules and qiime
 module load eb
 module load Miniconda2
+module load R
 
 #Load virtual environment
 source activate qiime1
