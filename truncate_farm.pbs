@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Truncate sequences
 echo "Truncating sequences"
 truncate_fasta_qual_files.py \
--f /home/cbmucl06/Split_libraries_Q25_orgfarm/seqs.fna\
+-f /home/cbmucl06/Split_libraries_Q25_orgfarm/seqs.fna \
 -q /home/cbmucl06/Split_libraries_Q25_orgfarm/seqs.qual \
 -b 255 \
 -o ~/Farm_truncated_seqs
