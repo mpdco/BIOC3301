@@ -15,7 +15,7 @@ export TMPDIR=~/qiime_tmp
 #Calculate differential abundance
 echo "Calculating differential abundance"
 differential_abundance.py \
---input_path /home/cbmucl06/Merged_analysis/chimsingleton_free_merged_OTU_table.biom \
+--input_path /home/cbmucl06/Merged_analysis/scf_otu_table.from_txt_json.biom \
 --out_path /home/cbmucl06/Merged_analysis/diff_abundance_otus.txt \
 --mapping_file_path /home/cbmucl06/Raw_data/merged_map.tsv \
 --algorithm DESeq2_nbinom \
