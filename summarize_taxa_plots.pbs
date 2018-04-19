@@ -14,8 +14,10 @@ export TMPDIR=~/qiime_tmp
 #Summarize taxa
 echo "Summarizing taxa and creating plots"
 summarize_taxa_through_plots.py \
--i /home/cbmucl06/Close_ref_otus_chimerafree/outliersingletonfree_otu_table.biom \
--o /home/cbmucl06/Close_ref_otus_chimerafree/Summarized_taxa\
+-i /home/cbmucl06/Chimerafree_Farm_cloref_OTUs_SILVA/singletonchimfree_farm_otu_table.biom \
+-o /home/cbmucl06/Chimerafree_Farm_cloref_OTUs_SILVA/Taxa_summary \
+-m /home/cbmucl06/Raw_data/merged_map.tsv \
+-c SampleSite
 
 echo "Summarizing taxa and creating plots... complete!"
 #Deactivating environment
