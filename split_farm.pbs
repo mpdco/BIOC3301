@@ -13,7 +13,7 @@ source activate qiime1
 #Splitting libraries
 echo "Split libraries"
 multiple_split_libraries_fastq.py \
--i /home/cbmucl06/Farm_data/Compost_samples \
+-i /home/cbmucl06/Raw_data/Farm_data/Compost_samples \
 -p ~/Parameter_files/split_libs_param.txt \
 -o ~/Split_libraries_Q25_orgfarm
 
