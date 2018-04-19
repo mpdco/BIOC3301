@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -t 0:10:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Count sequences
+echo "Counting sequences"
+count_seqs.py \
+-i ~/Farm_truncated_seqs/seqs_filtered.fasta \
+-o ~/Farm_truncated_seqs/seq_counts.txt
+
+echo "Counting sequences... complete!"
+
+#Deactivating environment
+source deactivate
