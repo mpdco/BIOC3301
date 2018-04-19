@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+module load R
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Compare OTU frequencies across sample groups
+echo "Comparing OTU frequencies across sample groups"
+group_significance.py \
+-i /home/cbmucl06/Merged_analysis/BIOM_tables/chimsingleton_free_merged_OTU_table.biom \
+-o /home/cbmucl06/Merged_analysis/nonparamttest_group_sig.txt \
+-m ~/Raw_data/merged_map_no_conv.tsv \
+-c SampleSite \
+-s nonparametric_t_test \
+--permutations 200 
+
+#Deactivating environment
+source deactivate
