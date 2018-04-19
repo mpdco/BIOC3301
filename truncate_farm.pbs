@@ -16,7 +16,7 @@ echo "Truncating sequences"
 truncate_fasta_qual_files.py \
 -f /home/cbmucl06/Split_libraries_Q25_orgfarm/seqs.fna \
 -q /home/cbmucl06/Split_libraries_Q25_orgfarm/seqs.qual \
--b 255 \
+-b 260 \
 -o ~/Farm_truncated_seqs
 
 echo "Truncating sequences... complete!"
