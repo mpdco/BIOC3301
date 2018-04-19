@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Summarize taxa
+echo "Summarizing taxa"
+summarize_taxa_through_plots.py \
+-i /home/cbmucl06/Merged_analysis/chimsingleton_free_merged_OTU_table.biom \
+-L 6 \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv_LEfSe.tsv \
+-d '|' \
+-o /home/cbmucl06/Merged_analysis/Summarized_taxa_L6_LEfSe
+
+echo "Summarizing taxa... complete!"
+
+#Deactivating environment
+source deactivate
