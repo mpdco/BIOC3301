@@ -6,6 +6,7 @@
 #Load modules and qiime
 module load eb
 module load Miniconda2
+module load R
 #Load virtual environment
 source activate qiime1
 
@@ -14,10 +15,11 @@ export TMPDIR=~/qiime_tmp
 #Generate heatmap
 echo "Generating OTU heatmap"
 make_otu_heatmap.py \
--i ~/Picked_OTUs/Close_ref_otus_Q25_contax7/otu_table.biom \
--o ~/Picked_OTUs/Close_ref_otus_Q25/OTU_heatmap.pdf \
+-i /home/cbmucl06/Merged_analysis/BIOM_tables/chimsingleton_free_merged_OTU_table.biom \
+-o /home/cbmucl06/Merged_analysis/heatmap.pdf \
 -t ~/SILVA_database/97_otus.tre \
--m ~/2018_02_smb/map_complete.tsv \
+-m ~/Raw_data/merged_map_no_conv.tsv \
+-c SampleSite
 
 #Deactivating environment
 source deactivate
