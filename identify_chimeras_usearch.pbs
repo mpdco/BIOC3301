@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 5:00:00
+#SBATCH -t 3:00:00
 #SBATCH -n 24
 #SBATCH -p normal
 
@@ -15,8 +15,8 @@ export TMPDIR=~/qiime_tmp
 echo "Identifying chimeric sequences"
 identify_chimeric_seqs.py \
 -m usearch61 \
--i ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
--o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/chimeric_seqs_usearch \
+-i /home/cbmucl06/Demultiplexed/Split_libraries_Q25_farm/seqs_rc.fna \
+-o /home/cbmucl06/Demultiplexed/Split_libraries_Q25_farm/farm_chimeric_seqs.fna \
 --reference_seqs_fp ~/SILVA_database/silva_132_97_16S.fna 
 
 echo "Identifying chimeric sequences... Completed"
