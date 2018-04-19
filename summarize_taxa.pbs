@@ -16,7 +16,7 @@ echo "Summarizing taxa"
 summarize_taxa.py \
 -i /home/cbmucl06/Merged_analysis/BIOM_tables/chimsingleton_free_merged_OTU_table.biom \
 -L 6 \
--m /home/cbmucl06/Merged_analysis/LEfSe_analysis/merged_map_LEfSe.tsv \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv_LEfSe.tsv \
 -d '|' \
 -o /home/cbmucl06/Merged_analysis/Summarized_taxa_L6_LEfSe
 
