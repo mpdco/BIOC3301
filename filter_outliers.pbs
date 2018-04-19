@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -t 3:00:00
+#SBATCH -t 1:00:00
 #SBATCH -n 24
-#SBATCH -p normal
+#SBATCH -p short
 
 #Load modules and qiime
 module load eb
@@ -14,10 +14,11 @@ export TMPDIR=~/qiime_tmp
 #Filter outlier samples
 echo "Filtering outlier samples "
 filter_samples_from_otu_table.py \
--i /home/cbmucl06/Close_ref_otus_chimerafree/singletonfree_otu_table.biom \
--o /home/cbmucl06/Close_ref_otus_chimerafree/outliersingletonfree_otu_table.biom \
--n 1000 \
--x 1000000
+-i ~/Merged_analysis/chimsingleton_free_merged_OTU_table.biom \
+-o ~/Merged_analysis_org_only/chimsingleton_free_merged_OTU_table.biom \
+-m ~/Raw_data/merged_map.tsv \
+--output_mapping_fp ~/Raw_data/merged_map_no_conv.tsv \
+-s 'SampleSite:*,!Conventional'
 
 #Deactivating environment
 source deactivate
