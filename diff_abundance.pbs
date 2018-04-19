@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Calculate differential abundance
+echo "Calculating differential abundance"
+differential_abundance.py \
+-i chimsingleton_free_merged_OTU_table.biom \
+-o diff_abundance_otus.txt \
+-m ~/Raw_data/merged_map.tsv \
+-a DESeq2_nbinom \
+-c SampleSite \
+-x Park \
+-y Organic \
+-d True 
+
+echo "Calculating differential abundance... Complete!"
+
+#Deactivating environment
+source deactivate
