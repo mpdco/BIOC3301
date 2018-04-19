@@ -14,9 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Filter chimeric sequences
 echo "Filtering chimeras"
 filter_fasta.py \
--f ~/Demultiplexed/Split_libraries_Q25/seqs.fna \
--o ~/Picked_OTUs/Close_ref_otus_Q25_contax7/seqs_chimeras_filtered.fna \
--s ~/Picked_OTUs/Close_ref_otus_Q25_contax7/chimeric_seqs_usearch/chimeras.txt \
+-f /home/cbmucl06/Demultiplexed/Split_libraries_Q25_farm/seqs_rc.fna \
+-o /home/cbmucl06/Demultiplexed/Split_libraries_Q25_farm/chimera_free_farm_seqs.fna \
+-s /home/cbmucl06/Demultiplexed/Split_libraries_Q25_farm/Chimera_analysis/chimeras.txt \
 -n
 
 echo "Filtering fasta sequences...completed."
