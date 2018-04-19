@@ -16,6 +16,7 @@ echo "Computing alpha diversity"
 alpha_rarefaction.py \
 -i /home/cbmucl06/Chimerafree_cloref_OTUs_SILVA/outliersingletonfree_otu_table.biom \
 -o /home/cbmucl06/Chimerafree_cloref_OTUs_SILVA/Results/Alpha_analysis_full_e3700 \
+-m /home/cbmucl06/Raw_data/Farm_data/farm_mapping.tsv \
 -t ~/SILVA_database/97_otus.tre \
 -p /home/cbmucl06/Parameter_files/alpha_div.txt \
 --min_rare_depth 0 \
