@@ -18,10 +18,11 @@ split_libraries_fastq.py \
 -i ~/SeqPrep_joined/seqprep_assembled.fastq.gz \
 -b ~/SeqPrep_joined/seqprep_assembled.fastq_barcodes.fastq \
 -o ~/Split_libraries_Q25_qual \
--m ~/2018_02_smb/map_complete.tsv \
+-m ~/Raw_data/Park_data/map_complete.tsv \
 -q 24 \
 --rev_comp_barcode \
 --rev_comp_mapping_barcodes \
+--store_qual_scores
 
 #Deactivating environment
 source deactivate
