@@ -15,9 +15,9 @@ export TMPDIR=~/qiime_tmp
 #Normalise table
 echo "Normalizing OTU table"
 normalize_table.py \
--i /home/cbmucl06/Farm_cloref_OTUs_SILVA/otu_table.biom \
+-i /home/cbmucl06/Merged_analysis/chimsingleton_free_merged_OTU_table.biom \
 -a CSS \
--o /home/cbmucl06/Farm_cloref_OTUs_SILVA/CSS_normalized_farm_otu_table.biom 
+-o /home/cbmucl06/Merged_analysis/CSS_normalized_merged_otu_table.biom 
 
 #Deactivating environment
 source deactivate
