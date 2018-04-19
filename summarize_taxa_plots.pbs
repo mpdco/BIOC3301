@@ -14,9 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Summarize taxa
 echo "Summarizing taxa and creating plots"
 summarize_taxa_through_plots.py \
--i /home/cbmucl06/Merged_analysis/chimsingleton_free_merged_OTU_table.biom \
--o /home/cbmucl06/Merged_analysis/Taxa_summary \
--m /home/cbmucl06/Raw_data/merged_map.tsv \
+-i /home/cbmucl06/Merged_analysis_org_only/chimsingleton_free_merged_OTU_table.biom \
+-o /home/cbmucl06/Merged_analysis_org_only/Taxa_summary \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -c SampleSite
 
 echo "Summarizing taxa and creating plots... complete!"
