@@ -11,13 +11,16 @@ source activate qiime1
 
 export TMPDIR=~/qiime_tmp
 
-#Parallel alpha diversoty
-echo "Calculating alpha diversity"
-parallel_alpha_diversity.py \
--i /home/cbmucl06/Close_ref_otus_chimerafree/Rarefied_otu_tables \
--o /home/cbmucl06/Close_ref_otus_chimerafree/Alpha_div_rarefied_tables \
+#Compute alpha diversity
+echo "Computing alpha diversity"
+alpha_rarefaction.py \
+-i /home/cbmucl06/Chimerafree_cloref_OTUs_SILVA/outliersingletonfree_otu_table.biom \
+-o /home/cbmucl06/Chimerafree_cloref_OTUs_SILVA/Results/Alpha_analysis_full_e3700 \
 -t ~/SILVA_database/97_otus.tre \
--m observed_otus,chao1,PD_whole_tree,goods_coverage,shannon \
+-m observed_otus,chao1,shannon,PD_whole_tree,goods_coverage \
+--min_rare_depth 0 \
+-e 3700 \
+-a \
 -O 24
 
 #Deactivating environment
