@@ -14,6 +14,6 @@ export TMPDIR=~/qiime_tmp
 #Filter singletons
 echo "Filtering singletons"
 filter_otus_from_otu_table.py \
--i /home/cbmucl06/Close_ref_otus_chimerafree/otu_table.biom \
--o /home/cbmucl06/Close_ref_otus_chimerafree/singletonfree_otu_table.biom \
+-i /home/cbmucl06/Chimerafree_Farm_cloref_OTUs_SILVA/otu_table.biom \
+-o /home/cbmucl06/Chimerafree_Farm_cloref_OTUs_SILVA/singletonchimfree_farm_otu_table.biom \
 -n 2
