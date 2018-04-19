@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Picking OTUS (closed reference)
 echo "Picking OTUS with closed reference"
 pick_closed_reference_otus.py \
--i /home/cbmucl06/Split_libraries_Q25_farm/chimera_free_farm_seqs.fna \
+-i /home/cbmucl06/Demultiplexed/Split_libraries_Q25_farm/chimera_free_farm_seqs.fna \
 -o ~/Chimerafree_Farm_cloref_OTUs_SILVA/ \
 -r ~/SILVA_database/silva_132_97_16S.fna \
 -t /home/cbmucl06/SILVA_database/Taxonomy_files/consensus_taxonomy_7_levels.txt \
