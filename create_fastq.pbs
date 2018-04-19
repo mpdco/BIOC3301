@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Convert FASTQ to FASTA
 echo "Converting FASTQ to FASTA"
 convert_fastaqual_fastq.py \
--f /home/cbmucl06/Raw_data/Farm_data/Compost_samples/comp-conv-s1.fastq.gz \
+-f /home/cbmucl06/Raw_data/Farm_data/Compost_samples/comp-org-s1.fastq.gz \
 -o /home/cbmucl06/Farm_data/FASTA_comp_conv-s1 \
 -c fastq_to_fastaqual
 
