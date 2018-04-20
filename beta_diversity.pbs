@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -t 4:00:00
+#SBATCH -n 24
+#SBATCH -p normal
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Compute beta diversity
+echo "Computing beta diversity"
+parallel_beta_diversity.py \
+-i /home/cbmucl06/Merged_analysis/BIOM_tables/chimsingleton_free_merged_OTU_table.biom \
+-o Beta_analysis \
+--metrics unweighted_unifrac,weighted_unifrac,bray_curtis \
+-t ~/SILVA_database/97_otus.tre \
+-O 24
+
+#Deactivating environment
+source deactivate
