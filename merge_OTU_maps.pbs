@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Merge OTU maps
 echo "Merging OTU maps"
 merge_otu_maps.py \
--i ~/chimera_free_farm_seqs_otus.txt,~/seqs_chimeras_filtered_otus.txt \
+-i /home/cbmucl06/chimera_free_farm_seqs_otus.txt,/home/cbmucl06/seqs_chimeras_filtered_otus.txt \
 -o /home/cbmucl06/merged_otu_map.txt
 
 #Deactivating environment
