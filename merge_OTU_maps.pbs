@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH -t 0:10:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Merge OTU maps
+echo "Merging OTU maps"
+merge_otu_maps.py \
+-i ~/chimera_free_farm_seqs_otus.txt,~/seqs_chimeras_filtered_otus.txt \
+-o /home/cbmucl06/merged_otu_map.txt
+
+#Deactivating environment
+source deactivate
