@@ -11,15 +11,16 @@ source activate qiime1
 
 export TMPDIR=~/qiime_tmp
 
-#Assign taxonomy
-echo "Assigning taxonomy"
+#Pick representative sets
+echo "Picking repr sets"
 assign_taxonomy.py \
+-m ~/Raw_data/merged_map_no_conv.tsv \
 -i /home/cbmucl06/Close_ref_otus_chimerafree/rep_seqs_chimera_otus.fna \
 -o /home/cbmucl06/Close_ref_otus_chimerafree/Assigned_taxonomy \
 -r ~/SILVA_database/silva_132_97_16S.fna \
 -t /home/cbmucl06/SILVA_database/Taxonomy_files/consensus_taxonomy_7_levels.txt 
 
-echo "Assigning taxonomy... complete!"
+echo "Picking repr sets... complete!"
 
 #Deactivating environment
 source deactivate
