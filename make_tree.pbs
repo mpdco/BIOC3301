@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH -t 3:00:00
+#SBATCH -n 24
+#SBATCH -p normal
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Make tree
+echo "Making tree"
+plot_taxa_summary.py \
+-i \
+-o \
+
+echo "Making tree...completed."
