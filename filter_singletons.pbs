@@ -16,7 +16,6 @@ echo "Filtering singletons"
 filter_otus_from_otu_table.py \
 -i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_2_otu_table.biom \
 -o /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom \
---min_count_fraction 0.00001 \
 -n 2
 
 source deactivate
