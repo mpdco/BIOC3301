@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 01:00:00
+#SBATCH -t 01:30:00
 #SBATCH -n 24
 #SBATCH -p short
 
@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Picking OTUS (closed reference)
 echo "Picking OTUS with closed reference"
 pick_closed_reference_otus.py \
--i /home/cbmucl06/Picked_OTUs/Close_ref_otus_Q25_contax7/seqs_chimeras_filtered.fna \
--o ~/Chimerafree_cloref_OTUs_SILVA/ \
+-i /home/cbmucl06/Combo_analysis/chimera_free_combo_seqs.fna \
+-o /home/cbmucl06/Chimerafree_combo_picked_OTUs/ \
 -r ~/SILVA_database/silva_132_97_16S.fna \
 -t /home/cbmucl06/SILVA_database/Taxonomy_files/consensus_taxonomy_7_levels.txt \
 --parallel \
