@@ -14,10 +14,10 @@ export TMPDIR=~/qiime_tmp
 #Plot alpha Rarefaction
 echo "Plotting alpha rarefactions"
 make_rarefaction_plots.py \
--i /home/cbmucl06/Close_ref_otus_chimerafree/Results/Collated_alpha_analysis \
--o /home/cbmucl06/Close_ref_otus_chimerafree/Results/Alpha_plots \
--m ~/2018_02_smb/map_complete.tsv \
--g pdf
+-i ~/Combo_analysis/Alpha_analysis/Collated_alpha_e4141 \
+-o ~/Combo_analysis/Alpha_analysis/Results/Alpha_plots_e4141 \
+--generate_average_tables \
+-m ~/Raw_data/merged_map_no_conv.tsv
 
 #Deactivating environment
 source deactivate
