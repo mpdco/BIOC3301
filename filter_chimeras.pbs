@@ -14,9 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Filter chimeric sequences
 echo "Filtering chimeras"
 filter_fasta.py \
--f /home/cbmucl06/TRUNCATED/Farm_truncated_seqs/seqs_filtered_rc.fasta \
--o /home/cbmucl06/TRUNCATED/Farm_truncated_seqs/chimera_free_farm_truncated_seqs.fna \
--s /home/cbmucl06/TRUNCATED/Farm_truncated_seqs/Chimeric_trucated_seqs/chimeras.txt \
+-f /home/cbmucl06/Combo_analysis/merged.fna \
+-o /home/cbmucl06/Combo_analysis/chimera_free_combo_seqs.fna \
+-s /home/cbmucl06/Combo_analysis/Chimeric_seqs/chimeras.txt \
 -n
 
 echo "Filtering fasta sequences...completed."
