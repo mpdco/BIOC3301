@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Filter alignment
+echo "Filtering alignment"
+filter_alignment.py \
+-i  
+
+echo "Filtering alignment...completed."
