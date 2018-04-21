@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Plot taxa
+echo "Plotting taxa"
+plot_taxa_summary.py \
+-i /home/cbmucl06/Combo_analysis/Summarized_taxa_maps/combo_taxa_map_L2.txt,/home/cbmucl06/Combo_analysis/Summarized_taxa_maps/combo_taxa_map_L3.txt,/home/cbmucl06/Combo_analysis/Summarized_taxa_maps/combo_taxa_map_L4.txt,/home/cbmucl06/Combo_analysis/Summarized_taxa_maps/combo_taxa_map_L5.txt,/home/cbmucl06/Combo_analysis/Summarized_taxa_maps/combo_taxa_map_L6.txt \
+-o /home/cbmucl06/Combo_analysis/Summarized_taxa_plots/ \
+-l Phylum,Class,Order,Family,Genus \
+-n 10 \
+-b SampleSite \
+-d 100 \
+-c pie,bar,area 
+
+echo "Plotting taxa...completed."
