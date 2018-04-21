@@ -15,8 +15,8 @@ export TMPDIR=~/qiime_tmp
 echo "Identifying chimeric sequences"
 identify_chimeric_seqs.py \
 -m usearch61 \
--i /home/cbmucl06/Merged_analysis_NEW/merged.fna \
--o /home/cbmucl06/Merged_analysis_NEW/Chimeric_seqs \
+-i /home/cbmucl06/Combo_analysis/merged.fna \
+-o /home/cbmucl06/Combo_analysis/Chimeric_seqs \
 --reference_seqs_fp ~/SILVA_database/silva_132_97_16S.fna 
 
 echo "Identifying chimeric sequences... Completed"
