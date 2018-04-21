@@ -18,7 +18,7 @@ summarize_taxa.py \
 -L 6 \
 -o /home/cbmucl06/Combo_analysis/Summarized_taxa_L6 \
 --delimiter '|' \
--m merged_map_no_conv.tsv
+-m ~/Raw_data/merged_map_no_conv.tsv
 
 echo "Summarizing taxa... complete!"
 
