@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 3:00:00
+#SBATCH -t 2:00:00
 #SBATCH -n 24
 #SBATCH -p normal
 
@@ -13,8 +13,8 @@ export TMPDIR=~/qiime_tmp
 
 #Make tree
 echo "Making tree"
-plot_taxa_summary.py \
--i \
--o \
+make_phylogeny.py \
+-i /home/cbmucl06/Combo_analysis/Aligned_rep_set_combo_pynast/Filtered_alignment/combo_rep_set_aligned_pfiltered.fasta \
+-o /home/cbmucl06/Combo_analysis/Composition_analysis/combo_rep_phylogeny.tre
 
 echo "Making tree...completed."
