@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Collate alpha results
 echo "Collating alpha diversity"
 collate_alpha.py \
--i /home/cbmucl06/Combo_analysis/Alpha_analysis/Rarefied_tables_e4141 \
+-i /home/cbmucl06/Combo_analysis/Alpha_analysis/Alpha_tables_e4141 \
 -o /home/cbmucl06/Combo_analysis/Alpha_analysis/Collated_alpha_analysis \
 
 #Deactivating environment
