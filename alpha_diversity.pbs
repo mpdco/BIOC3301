@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 4:00:00
+#SBATCH -t 2:00:00
 #SBATCH -n 24
 #SBATCH -p normal
 
@@ -14,15 +14,11 @@ export TMPDIR=~/qiime_tmp
 #Compute alpha diversity
 echo "Computing alpha diversity"
 parallel_alpha_diversity.py \
--i /home/cbmucl06/Merged_analysis/Alpha_analysis/Rarefied_tables_e4141 \
--o /home/cbmucl06/Merged_analysis/Alpha_analysis/Alpha_tables_e4141 \
--m ~/Raw_data/merged_map_no_conv.tsv \
--t ~/SILVA_database/97_otus.tre \
--p /home/cbmucl06/Parameter_files/alpha_div.txt \
---min_rare_depth 0 \
--e 3700 \
--a \
+-i /home/cbmucl06/Combo_analysis/Alpha_analysis/Rarefied_tables_e4141 \
+-o /home/cbmucl06/Combo_analysis/Alpha_analysis/Alpha_tables_e \
+-t /home/cbmucl06/Combo_analysis/Composition_analysis/combo_rep_phylogeny.tre \
 -O 24
+
 
 #Deactivating environment
 source deactivate
