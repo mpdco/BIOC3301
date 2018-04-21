@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -t 1:00:00
+#SBATCH -t 2:00:00
 #SBATCH -n 24
-#SBATCH -p short
+#SBATCH -p normal
 
 #Load modules and qiime
 module load eb
@@ -14,10 +14,10 @@ export TMPDIR=~/qiime_tmp
 #Compute beta diversity
 echo "Computing beta diversity"
 parallel_beta_diversity.py \
--i /home/cbmucl06/Merged_analysis/BIOM_tables/chimsingleton_free_merged_OTU_table.biom \
--o Beta_analysis \
+-i /home/cbmucl06/Combo_analysis/Alpha_analysis/Rarefied_tables_e4141 \
+-o /home/cbmucl06/Combo_analysis/Beta_analysis \
 --metrics unweighted_unifrac,weighted_unifrac,bray_curtis \
--t ~/SILVA_database/97_otus.tre \
+-t /home/cbmucl06/Combo_analysis/Composition_analysis/combo_filtered_rep_phylogeny.tre \
 -O 24
 
 #Deactivating environment
