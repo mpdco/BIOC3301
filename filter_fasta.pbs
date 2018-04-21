@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Filter FASTA
 echo "Filtering FASTA"
 filter_fasta.py \
--i ~/Combo_analysis/chimera_free_combo_seqs.fna \
+-f ~/Combo_analysis/chimera_free_combo_seqs.fna \
 -o ~/Combo_analysis/fully_filtered_combo_seqs.fna \
 -b ~/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom
 
