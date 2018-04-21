@@ -14,6 +14,10 @@ export TMPDIR=~/qiime_tmp
 #Filter alignment
 echo "Filtering alignment"
 filter_alignment.py \
--i  
+-i /home/cbmucl06/Combo_analysis/Aligned_rep_set_combo_pynast/combo_rep_set_aligned.fasta \
+-o -i /home/cbmucl06/Combo_analysis/Aligned_rep_set_combo_pynast/Filtered_alignment \
+--suppress_lane_mask_filter \
+-g 0.80 \
+-e 0.1
 
 echo "Filtering alignment...completed."
