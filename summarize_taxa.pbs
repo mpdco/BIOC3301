@@ -16,8 +16,7 @@ echo "Summarizing taxa"
 summarize_taxa.py \
 -i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom \
 -L 2,3,4,5,6 \
--d '|' \
--o /home/cbmucl06/Combo_analysis/Summarized_taxa
+-o /home/cbmucl06/Combo_analysis/Summarized_taxa_list
 
 echo "Summarizing taxa... complete!"
 
