@@ -14,12 +14,12 @@ export TMPDIR=~/qiime_tmp
 #Multiple Rarefaction
 echo "Creating Multiple rarefactions"
 parallel_multiple_rarefactions.py \
--i /home/cbmucl06/Merged_analysis/BIOM_tables/chimsingleton_free_merged_OTU_table.biom \
--o /home/cbmucl06/Merged_analysis/Alpha_analysis/Rarefied_tables_e4141 \
--m 11 \
--x 4141 \
--s 413 \
--n 20 \
+-i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom \
+-o /home/cbmucl06/Combo_analysis/Alpha_analysis/Rarefied_tables_e4141 \
+-m 9 \
+-x 4284 \
+-s 285 \
+-n 30 \
 -O 24
 
 #Deactivating environment
