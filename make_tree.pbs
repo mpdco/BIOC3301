@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -t 2:00:00
+#SBATCH -t 1:00:00
 #SBATCH -n 24
-#SBATCH -p normal
+#SBATCH -p short
 
 #Load modules and qiime
 module load eb
@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Make tree
 echo "Making tree"
 make_phylogeny.py \
--i /home/cbmucl06/Combo_analysis/Aligned_rep_set_combo_pynast/Filtered_alignment/combo_rep_set_aligned_pfiltered.fasta \
--o /home/cbmucl06/Combo_analysis/Composition_analysis/combo_rep_phylogeny.tre
+-i /home/cbmucl06/Combo_analysis/Aligned_filtered_combo_rep_set/Filtered_alignment/filtered_combo_rep_set_aligned_pfiltered.fasta \
+-o /home/cbmucl06/Combo_analysis/Composition_analysis/combo_filtered_rep_phylogeny.tre
 
 echo "Making tree...completed."
