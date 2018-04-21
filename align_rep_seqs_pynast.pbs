@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 1:00:00
+#SBATCH -t 0:20:00
 #SBATCH -n 24
 #SBATCH -p short
 
@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Align representative sequences
 echo "Aligning representative sequences"
 align_seqs.py \
--i /home/cbmucl06/Split_libraries_Q25_farm/seqs.fna \
--o /home/cbmucl06/Aligned_repr_seqs_farm \
+-i /home/cbmucl06/Combo_analysis/combo_rep_set.fna \
+-o /home/cbmucl06/Combo_analysis/pynast_combo_aligned_rep_set \
 -t ~/SILVA_database/97_alignment.fna
 
 #Deactivating environment
