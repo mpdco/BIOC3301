@@ -14,11 +14,11 @@ export TMPDIR=~/qiime_tmp
 #Summarize taxa
 echo "Summarizing taxa"
 summarize_taxa.py \
--i /home/cbmucl06/Merged_analysis/BIOM_tables/chimsingleton_free_merged_OTU_table.biom \
--L 6 \
--m /home/cbmucl06/Raw_data/merged_map_no_conv_LEfSe.tsv \
+-i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom \
+-L 2,3,4,5,6 \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -d '|' \
--o /home/cbmucl06/Merged_analysis/Summarized_taxa_L6_LEfSe
+-o /home/cbmucl06/Combo_analysis/Summarized_taxa
 
 echo "Summarizing taxa... complete!"
 
