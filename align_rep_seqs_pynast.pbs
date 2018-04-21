@@ -13,10 +13,11 @@ export TMPDIR=~/qiime_tmp
 
 #Align representative sequences
 echo "Aligning representative sequences"
-align_seqs.py \
+parallel_align_seqs_pynast.py \
 -i /home/cbmucl06/Combo_analysis/combo_rep_set.fna \
--o /home/cbmucl06/Combo_analysis/pynast_combo_aligned_rep_set \
--t ~/SILVA_database/97_alignment.fna
+-o /home/cbmucl06/Combo_analysis/Aligned_rep_set_combo_pynast \
+-t ~/SILVA_database/97_alignment.fna \
+-O 24
 
 #Deactivating environment
 source deactivate
