@@ -14,9 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Compare alpha diversity
 echo "Comparing alpha diversity"
 compare_alpha_diversity.py \
--i /home/cbmucl06/Combo_analysis/Alpha_analysis/Collated_alpha_analysis_e4284/chao1.txt \
+-i /home/cbmucl06/Combo_analysis/Alpha_analysis/Collated_alpha_analysis_e4284/observed_otus.txt \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -c SampleSite \
--o /home/cbmucl06/Combo_analysis/Alpha_analysis/Nonparam_compare_alpha_chao1
+-o /home/cbmucl06/Combo_analysis/Alpha_analysis/Nonparam_compare_alpha_observedotus
 
 echo "Comparing alpha diversity...completed."
