@@ -18,6 +18,7 @@ group_significance.py \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/nonparam_hilev_rarefied.txt \
 -c SampleSite \
+--metadata_key KEGG_Pathways \
 -s nonparametric_t_test 
 
 echo "Computing group significance...completed."
