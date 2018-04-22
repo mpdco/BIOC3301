@@ -18,7 +18,7 @@ summarize_taxa_through_plots.py \
 -o ~/Combo_analysis/PICRUSt_analysis/Summarize_KEGG_hilev_rarefied \
 -p ~/Parameter_files/picrust.txt \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
--c SampleSite
+-c SampleNitrogen
 
 echo "Summarizing taxa and creating plots... complete!"
 #Deactivating environment
