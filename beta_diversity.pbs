@@ -14,11 +14,10 @@ export TMPDIR=~/qiime_tmp
 #Compute beta diversity
 echo "Computing beta diversity"
 parallel_beta_diversity.py \
--i /home/cbmucl06/Combo_analysis/Alpha_analysis/Rarefied_tables_e4141 \
+-i /home/cbmucl06/Combo_analysis/Alpha_analysis/Alpha_tables_e4284/alpha_rarefaction_e4284 \
 -o /home/cbmucl06/Combo_analysis/Beta_analysis \
 --metrics unweighted_unifrac,weighted_unifrac,bray_curtis \
--t /home/cbmucl06/Combo_analysis/Composition_analysis/combo_filtered_rep_phylogeny.tre \
--O 24
+-t /home/cbmucl06/Combo_analysis/Composition_analysis/combo_filtered_rep_phylogeny.tre 
 
 #Deactivating environment
 source deactivate
