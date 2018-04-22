@@ -15,9 +15,8 @@ export TMPDIR=~/qiime_tmp
 #Generate heatmap
 echo "Generating OTU heatmap"
 make_otu_heatmap.py \
--i /home/cbmucl06/Merged_analysis/BIOM_tables/chimsingleton_free_merged_OTU_table.biom \
--o /home/cbmucl06/Merged_analysis/heatmap.pdf \
--t ~/SILVA_database/97_otus.tre \
+-i ~/Combo_analysis/PICRUSt_analysis/PICRUSt_output_high_rarefied.biom \
+-o ~/Combo_analysis/PICRUSt_analysis/heatmap.pdf \
 -m ~/Raw_data/merged_map_no_conv.tsv \
 -c SampleSite
 
