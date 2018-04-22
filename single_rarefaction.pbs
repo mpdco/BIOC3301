@@ -12,9 +12,9 @@ source activate qiime1
 
 export TMPDIR=~/qiime_tmp
 
-#Multiple Rarefaction
-echo "Creating Multiple rarefactions"
-multiple_rarefactions_even_depth.py \
+#Single Rarefaction
+echo "Creating singe rarefaction"
+single_rarefaction.py \
 -i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/core_microbiome_025/core_table_25.biom \
 -o /home/cbmucl06/Combo_analysis/Core_microbiome_025_rarefied_e4284.biom \
 -d 2540
