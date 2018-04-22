@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Plot alpha Rarefaction
 echo "Plotting alpha rarefactions"
 make_rarefaction_plots.py \
--i ~/Combo_analysis/Alpha_analysis/Collated_alpha_e4284 \
--o ~/Combo_analysis/Alpha_analysis/Results/Alpha_plots_e4284 \
+-i ~/Combo_analysis/Alpha_analysis/Collated_alpha_analysis_e4284 \
+-o ~/Combo_analysis/Alpha_analysis/Alpha_plots_e4284 \
 --generate_average_tables \
 -m ~/Raw_data/merged_map_no_conv.tsv
 
