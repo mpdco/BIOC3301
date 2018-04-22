@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Make distance boxplots
+echo "Making distance boxplots"
+make_distance_boxplots.py \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
+-o /home/cbmucl06/Combo_analysis/Beta_analysis/Statistical_analysis/Distance_boxplots/Braycurtis \
+-d /home/cbmucl06/Combo_analysis/Beta_analysis/bray_curtis_dm.txt \
+-f "SampleSite" \
+--save_raw_data \
+--num_permutations 999 
+
+echo "Making distance boxplots...completed."
