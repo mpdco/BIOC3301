@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Compute group significance
 echo "Computing group significance"
 group_significance.py \
--i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Core_microbiome_hilev_025/core_table_25.biom \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_output_highlev.biom \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Group_significance/nonparam_cmb25.txt \
 -c SampleSite \
