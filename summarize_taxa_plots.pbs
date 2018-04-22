@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Summarize taxa
 echo "Summarizing taxa and creating plots"
 summarize_taxa_through_plots.py \
--i ~/Combo_analysis/PICRUSt_analysis/PICRUSt_output_high_rarefied.biom \
--o ~/Combo_analysis/PICRUSt_analysis/Summarize_KEGG_hilev_rarefied \
+-i ~/Combo_analysis/PICRUSt_analysis/PICRUSt_highlev_BIOM.biom \
+-o ~/Combo_analysis/PICRUSt_analysis/Summarize_KEGG_hilev_BIOM \
 -p ~/Parameter_files/picrust.txt \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -c SampleSite
