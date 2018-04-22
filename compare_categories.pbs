@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 1:00:00
+#SBATCH -t 0:10:00
 #SBATCH -n 24
 #SBATCH -p short
 
@@ -14,9 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Compare categories
 echo "Comparing categories"
 compare_categories.py \
---method permanova \
+--method anosim \
 -i /home/cbmucl06/Combo_analysis/Beta_analysis/weighted_unifrac_dm.txt \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -c SampleSite \
--o /home/cbmucl06/Combo_analysis/Beta_analysis/Statistical_analysis/Compare_categories/PERMANOVA_wunifrac
+-o /home/cbmucl06/Combo_analysis/Beta_analysis/Statistical_analysis/Compare_categories/ANOSIM_wunifrac
 echo "Comparing categories...completed."
