@@ -17,9 +17,7 @@ pick_closed_reference_otus.py \
 -i /home/cbmucl06/Combo_analysis/chimera_free_combo_seqs.fna \
 -o /home/cbmucl06/Chimerafree_combo_picked_OTUs_PICRUSt/ \
 -r /home/cbmucl06/GREENGENES_database/rep_set/97_otus.fasta \
--t /home/cbmucl06/GREENGENES_database/taxonomy/97_otu_taxonomy.txt \
---parallel \
--O 24
+-t /home/cbmucl06/GREENGENES_database/taxonomy/97_otu_taxonomy.txt
 
 #Deactivating environment
 source deactivate
