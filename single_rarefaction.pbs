@@ -14,9 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Single Rarefaction
 echo "Creating singe rarefaction"
 single_rarefaction.py \
--i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom \
--o /home/cbmucl06/Combo_analysis/filtered_3_otu_single_rarefied_e4284.biom \
--d 4284
+-i /home/cbmucl06/Chimerafree_combo_picked_OTUs_PICRUSt_new/filt_2_otu_table.biom \
+-o /home/cbmucl06/Chimerafree_combo_picked_OTUs_PICRUSt_new/filtered_3_otu_single_rarefied_e4087.biom \
+-d 4087
 
 #Deactivating environment
 source deactivate
