@@ -15,8 +15,8 @@ export TMPDIR=~/qiime_tmp
 echo "Comparing categories"
 compare_categories.py \
 --method permanova \
--i /home/cbmucl06/Combo_analysis/Beta_analysis/unweighted_unifrac_dm.txt \
+-i /home/cbmucl06/Combo_analysis/Beta_analysis/weighted_unifrac_dm.txt \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -c SampleSite \
--o /home/cbmucl06/Combo_analysis/Beta_analysis/Statistical_analysis/Compare_categories/PERMANOVA_uwunifrac
+-o /home/cbmucl06/Combo_analysis/Beta_analysis/Statistical_analysis/Compare_categories/PERMANOVA_wunifrac
 echo "Comparing categories...completed."
