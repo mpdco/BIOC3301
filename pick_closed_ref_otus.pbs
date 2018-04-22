@@ -15,9 +15,10 @@ export TMPDIR=~/qiime_tmp
 echo "Picking OTUS with closed reference"
 pick_closed_reference_otus.py \
 -i /home/cbmucl06/Combo_analysis/chimera_free_combo_seqs.fna \
--o /home/cbmucl06/Chimerafree_combo_picked_OTUs/ \
--r ~/SILVA_database/silva_132_97_16S.fna \
--t /home/cbmucl06/SILVA_database/Taxonomy_files/consensus_taxonomy_7_levels.txt \
+-o /home/cbmucl06/Chimerafree_combo_picked_OTUs_PICRUSt/ \
+-p ~/Parameter_files/PICRUSt_pick_otus.txt \
+-r /home/cbmucl06/GREENGENES_database/rep_set/97_otus.fasta \
+-t /home/cbmucl06/GREENGENES_database/taxonomy/97_otu_taxonomy.txt \
 --parallel \
 -O 24
 
