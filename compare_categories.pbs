@@ -13,11 +13,10 @@ export TMPDIR=~/qiime_tmp
 
 #Compare categories
 echo "Comparing categories"
-compare_alpha_diversity.py \
+compare_categories.py \
 --method anosim \
 -i /home/cbmucl06/Combo_analysis/Beta_analysis/weighted_unifrac_dm.txt \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -c SampleSite \
 -o /home/cbmucl06/Combo_analysis/Beta_analysis/Compare_cats_anosim_uwunifrac
-
 echo "Comparing categories...completed."
