@@ -11,14 +11,13 @@ source activate qiime1
 
 export TMPDIR=~/qiime_tmp
 
-#Make bipartite network
-echo "Making bipartite network"
-make_bipartite_network.py  \
+#Make OTU network
+echo "Making OTU network"
+make_otu_network.py \
 -i /home/cbmucl06/Combo_analysis/filtered_3_otu_single_rarefied_e4284.biom \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
--o /home/cbmucl06/Combo_analysis/Composition_analysis/Bipartite_network \
--k \
---md_fields "SampleSite" \
---scolors "Park,Organic"
+-o /home/cbmucl06/Combo_analysis/Composition_analysis/OTU_network \
+-b "SampleSite"
 
-echo "Making bipartite network...completed."
+#Deactivating environment
+source deactivate
