@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Filter outlier samples
 echo "Filtering outlier samples "
 filter_samples_from_otu_table.py \
--i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/otu_table.biom \
--o /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_2_otu_table.biom \
+-i /home/cbmucl06/Chimerafree_combo_picked_OTUs_PICRUSt_new/otu_table.biom \
+-o /home/cbmucl06/Chimerafree_combo_picked_OTUs_PICRUSt_new/singout_filt_otu_table.biom \
 -n 4000 \
 -x 210000
 
