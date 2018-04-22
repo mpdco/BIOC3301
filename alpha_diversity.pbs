@@ -17,6 +17,7 @@ parallel_alpha_diversity.py \
 -i /home/cbmucl06/Combo_analysis/Alpha_analysis/Rarefied_tables_e4141 \
 -o /home/cbmucl06/Combo_analysis/Alpha_analysis/Alpha_tables_e4141 \
 -t /home/cbmucl06/Combo_analysis/Composition_analysis/combo_filtered_rep_phylogeny.tre \
+-m chao1,shannon,goods_coverage,PD_whole_tree,observed_otus \
 -O 24
 
 
