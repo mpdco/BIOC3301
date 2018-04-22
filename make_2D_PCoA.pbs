@@ -14,9 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Generate 2D PCoA plots
 echo "Generating 2D PCoA plots"
 make_2d_plots.py \
--i /home/cbmucl06/Combo_analysis/Beta_analysis/bray_curtis_pc.txt \
+-i /home/cbmucl06/Combo_analysis/Beta_analysis/unweighted_unifrac_pc.txt \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -b "SampleSite" \
--o /home/cbmucl06/Combo_analysis/Beta_analysis/2D_PCoA
+-o /home/cbmucl06/Combo_analysis/Beta_analysis/2D_PCoA_uwunifrac
 
 echo "Generating 2D PCoA plots...completed."
