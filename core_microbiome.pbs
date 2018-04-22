@@ -14,12 +14,11 @@ export TMPDIR=~/qiime_tmp
 #Compute core microbiome
 echo "Computing core microbiome"
 compute_core_microbiome.py \
--i ~/Merged_analysis/chimsingleton_free_merged_OTU_table.biom \
--o ~/Merged_analysis/Core_microbiome_organic \
---min_fraction_for_core 0.9 \
---num_fraction_for_core_steps 20 \
---mapping_fp /home/cbmucl06/Raw_data/merged_map.tsv \
---valid_states "SampleSite:Organic" 
+-i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom \
+-o /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/core_microbiome_025
+--min_fraction_for_core 0.25 \
+--max_fraction_for_core 0.25 \
+--mapping_fp /home/cbmucl06/Raw_data/merged_map_no_conv.tsv
 
 echo "Computing core microbiome... complete!"
 
