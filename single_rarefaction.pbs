@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #SBATCH -t 1:00:00
 #SBATCH -n 24
