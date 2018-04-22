@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Compute core microbiome
 echo "Computing core microbiome"
 compute_core_microbiome.py \
--i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom \
--o /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/core_microbiome_025 \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_output_highlev.biom \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Core_microbiome_hilev_025 \
 --min_fraction_for_core 0.25 \
 --max_fraction_for_core 0.25 \
 --mapping_fp /home/cbmucl06/Raw_data/merged_map_no_conv.tsv
