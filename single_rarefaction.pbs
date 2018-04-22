@@ -12,9 +12,9 @@ source activate qiime1
 export TMPDIR=~/qiime_tmp
 
 #Single Rarefaction
-echo "Creating singe rarefaction"
+echo "Creating single rarefaction"
 single_rarefaction.py \
--i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_output_highlev.biom \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_highlev_BIOM.biom \
 -o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_output_high_rarefied.biom \
 -d 5590398
 
