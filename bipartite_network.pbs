@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Make bipartite network
+echo "Making bipartite network"
+make_bipartite_network.py  \
+-i /home/cbmucl06/Combo_analysis/filtered_3_otu_single_rarefied_e4284.biom \
+-d /home/cbmucl06/Combo_analysis/Beta_analysis/bray_curtis_dm.txt \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
+-o /home/cbmucl06/Combo_analysis/Composition_analysis/Bipartite_network \
+--md_fields "SampleSite" \
+--scolors "Park,Organic"
+
+echo "Making bipartite network...completed."
