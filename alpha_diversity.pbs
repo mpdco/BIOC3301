@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -t 2:00:00
+#SBATCH -t 1:00:00
 #SBATCH -n 24
-#SBATCH -p normal
+#SBATCH -p short
 
 #Load modules and qiime
 module load eb
@@ -15,9 +15,9 @@ export TMPDIR=~/qiime_tmp
 echo "Computing alpha diversity"
 parallel_alpha_diversity.py \
 -i /home/cbmucl06/Combo_analysis/Alpha_analysis/Rarefied_tables_e4141 \
--o /home/cbmucl06/Combo_analysis/Alpha_analysis/Alpha_tables_e4141 \
+-o /home/cbmucl06/Combo_analysis/Alpha_analysis/Shannon_tables_e4141 \
 -t /home/cbmucl06/Combo_analysis/Composition_analysis/combo_filtered_rep_phylogeny.tre \
--m chao1,shannon,goods_coverage,PD_whole_tree,observed_otus \
+-m simpson \
 -O 24
 
 
