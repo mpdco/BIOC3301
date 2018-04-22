@@ -1,0 +1,23 @@
+
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Multiple Rarefaction
+echo "Creating Multiple rarefactions"
+multiple_rarefactions_even_depth.py \
+-i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/core_microbiome_025/core_table_25.biom \
+-o /home/cbmucl06/Combo_analysis/Core_microbiome_025_rarefied_e4284.biom \
+-d 2540
+
+#Deactivating environment
+source deactivate
