@@ -17,6 +17,7 @@ make_bipartite_network.py  \
 -i /home/cbmucl06/Combo_analysis/filtered_3_otu_single_rarefied_e4284.biom \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -o /home/cbmucl06/Combo_analysis/Composition_analysis/Bipartite_network \
+-k \
 --md_fields "SampleSite" \
 --scolors "Park,Organic"
 
