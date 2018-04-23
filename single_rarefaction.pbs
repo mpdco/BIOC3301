@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Single Rarefaction
 echo "Creating single rarefaction"
 single_rarefaction.py \
--i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_highlev_BIOM.biom \
--o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_output_high_rarefied.biom \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_medlev_BIOM.biom \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_output_med_rarefied.biom \
 -d 5590398
 
 #Deactivating environment
