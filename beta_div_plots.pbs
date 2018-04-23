@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Compute beta diversity
 echo "Computing beta diversity"
 beta_diversity_through_plots.py \
--i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_medlev_BIOM.biom \
--o ~/Combo_analysis/PICRUSt_analysis/Beta_diversity \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/BIOM_tables/PICRUSt_highlev_BIOM.biom \
+-o ~/Combo_analysis/PICRUSt_analysis/Beta_diversity_hilev \
 -m ~/Raw_data/merged_map_no_conv.tsv \
 -e 5590398 \
 -p ~/Parameter_files/picrust.txt
