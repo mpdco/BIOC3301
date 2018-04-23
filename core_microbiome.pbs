@@ -16,9 +16,11 @@ echo "Computing core microbiome"
 compute_core_microbiome.py \
 -i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_medlev_BIOM.biom \
 -o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Core_microbiome_medlev_95 \
---min_fraction_for_core 0.95 \
+--min_fraction_for_core 0.75 \
 --max_fraction_for_core 0.95 \
---mapping_fp /home/cbmucl06/Raw_data/merged_map_no_conv.tsv
+--num_fraction_for_core_steps 1
+--mapping_fp /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
+--otu_md "KEGG_Pathways"
 
 echo "Computing core microbiome... complete!"
 
