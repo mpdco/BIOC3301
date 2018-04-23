@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Count sequences
 echo "Counting sequences"
 count_seqs.py \
--i ~/Combo_analysis/merged.fna \
+-i /home/cbmucl06/Combo_analysis/Chimeric_seqs/chimeras.txt \
 -o ~/Combo_analysis/comboseq_counts.txt
 
 echo "Counting sequences... complete!"
