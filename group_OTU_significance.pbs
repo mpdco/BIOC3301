@@ -14,9 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Compute group significance
 echo "Computing group significance"
 group_significance.py \
--i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_output_medlev.biom \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_output_med_rarefied.biom \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
--o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/nonparam_medlev.txt \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/nonparam_medlev_rarefied.txt \
 -c SampleSite \
 --metadata_key KEGG_Pathways \
 -s nonparametric_t_test 
