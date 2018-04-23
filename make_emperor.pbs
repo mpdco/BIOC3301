@@ -17,7 +17,7 @@ make_emperor.py \
 -c \
 -i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procustes_analysis_medlev \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
--o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procustes_analysis_medlev/Plots \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procustes_analysis_medlev/Plots_2ax \
 -b 'SampleSite' \
 --number_of_axes 2
 
