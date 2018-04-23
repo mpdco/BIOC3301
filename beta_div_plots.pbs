@@ -14,12 +14,11 @@ export TMPDIR=~/qiime_tmp
 #Compute beta diversity
 echo "Computing beta diversity"
 beta_diversity_through_plots.py \
--i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_3_otu_table.biom \
--o ~/Combo_analysis/Beta_analysis/ \
--t /home/cbmucl06/Combo_analysis/Composition_analysis/combo_filtered_rep_phylogeny.tre \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_medlev_BIOM.biom \
+-o ~/Combo_analysis/PICRUSt_analysis/Beta_diversity \
 -m ~/Raw_data/merged_map_no_conv.tsv \
--e 4284 \
--p ~/Parameter_files/beta_div.txt
+-e 5590398 \
+-p ~/Parameter_files/picrust.txt
 
 #Deactivating environment
 source deactivate
