@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Determine alpha diversity
+echo "Determining alpha diversity"
+alpha_rarefaction.py \
+-i /home/cbmucl06/Combo_analysis/Chimerafree_combo_picked_OTUs/filtered_2_otu_table.biom \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
+-o /home/cbmucl06/Combo_analysis/Alpha_analysis/Alpha_with_singletons \
+-t /home/cbmucl06/Combo_analysis/Composition_analysis/combo_filtered_rep_phylogeny.tre \
+-p ~/Parameter_files/alpha_div.txt \
+-e 4479 \
+--min_rare_depth 9 \
+-n 16 \
+-a \
+-O 24
+
+#Deactivating environment
+source deactivate
