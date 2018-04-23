@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Make emperor plot
+echo "Making emperor plot"
+make_emperor.py \
+-c \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procustes_analysis_medlev \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procustes_analysis_medlev/Plots \
+-b 'SampleSite' 
+
+#Deactivating environment
+source deactivate
