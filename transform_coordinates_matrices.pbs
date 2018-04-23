@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Transform coordinate matrices
+echo "Transforming coordinate matrices"
+transform_coordinate_matrices.py \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Beta_diversity_medlev/bray_curtis_pc.txt,/home/cbmucl06/Combo_analysis/Beta_analysis/bray_curtis_pc.txt \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procustes_analysis \
+-r 999
+
+#Deactivating environment
+source deactivate
