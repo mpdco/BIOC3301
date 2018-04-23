@@ -14,7 +14,7 @@ export TMPDIR=~/qiime_tmp
 #Compute core microbiome
 echo "Computing core microbiome"
 compute_core_microbiome.py \
--i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/PICRUSt_medlev_BIOM.biom \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/BIOM_tables/PICRUSt_medlev_BIOM.biom \
 -o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Core_microbiome_medlev_95 \
 --min_fraction_for_core 0.75 \
 --max_fraction_for_core 0.95 \
