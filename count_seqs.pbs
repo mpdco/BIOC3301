@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Count sequences
 echo "Counting sequences"
 count_seqs.py \
--i ~/Farm_truncated_seqs/seqs_filtered.fasta \
--o ~/Farm_truncated_seqs/seq_counts.txt
+-i ~/Combo_analysis/merged.fna \
+-o ~/Combo_analysis/comboseq_counts.txt
 
 echo "Counting sequences... complete!"
 
