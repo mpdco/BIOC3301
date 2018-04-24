@@ -15,8 +15,8 @@ export TMPDIR=~/qiime_tmp
 echo "Making distance boxplots"
 make_distance_boxplots.py \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
--o /home/cbmucl06/Combo_analysis/Beta_analysis/Statistical_analysis/Distance_boxplots/Weighted_UF \
--d /home/cbmucl06/Combo_analysis/Beta_analysis/weighted_unifrac_dm.txt \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Beta_diversity_hilev/Distance_boxplot_BC \
+-d /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Beta_diversity_hilev/bray_curtis_dm.txt \
 -f "SampleSite" \
 --save_raw_data \
 --num_permutations 999 
