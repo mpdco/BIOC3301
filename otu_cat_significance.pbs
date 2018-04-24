@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Determine alpha diversity
+echo "Determining alpha diversity"
+otu_category_significance.py \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/BIOM_tables/PICRUSt_highlev_BIOM.biom \
+-m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Category_significance \
+-c "SampleSite" \
+--relative_abundance
+
+#Deactivating environment
+source deactivate
