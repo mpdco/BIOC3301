@@ -14,10 +14,9 @@ export TMPDIR=~/qiime_tmp
 #Summarize taxa
 echo "Summarizing taxa and creating plots"
 summarize_taxa_through_plots.py \
--i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Core_microbiome_medlev_95/core_table_85.biom \
--o ~/Combo_analysis/PICRUSt_analysis/Core_microbiome_medlev \
--p ~/Parameter_files/picrust.txt \
--m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/BIOM_tables/PICRUSt_output_high_rarefied.biom \
+-o ~/Combo_analysis/PICRUSt_analysis/Highlev_taxa_summary_analysis \
+-p ~/Parameter_files/picrust.txt
 
 
 echo "Summarizing taxa and creating plots... complete!"
