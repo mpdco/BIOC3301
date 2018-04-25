@@ -18,7 +18,9 @@ alpha_rarefaction.py \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
 -o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Alpha_analysis \
 -p ~/Parameter_files/alpha_div.txt \
--e 5590398 \
+-e 5590000 \
+--min_rare_depth 10000 \
+-n 10 \
 -a \
 -O 24
 
