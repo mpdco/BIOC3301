@@ -20,7 +20,7 @@ alpha_rarefaction.py \
 -p ~/Parameter_files/alpha_div.txt \
 -e 5590000 \
 --min_rare_depth 10000 \
--n 10 \
+-n 8 \
 -a \
 -O 24
 
