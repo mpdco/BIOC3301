@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+#Load modules and qiime
+module load eb
+module load Miniconda2
+#Load virtual environment
+source activate qiime1
+
+export TMPDIR=~/qiime_tmp
+
+#Filter OTUs
+echo "Filtering OTUS"
+filter_otus_from_otu_table.py \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/BIOM_tables/PICRUSt_output_high_rarefied.biom \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/BIOM_tables/agri_filtered_PICRUSt_rarefied.biom \
+--negate_ids_to_exclude \
+-e ~/agri_functions.txt
+
+source deactivate
+
+echo "Filtering OTUs...completed."
