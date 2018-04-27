@@ -14,8 +14,8 @@ export TMPDIR=~/qiime_tmp
 #Transform coordinate matrices
 echo "Transforming coordinate matrices"
 transform_coordinate_matrices.py \
--i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Beta_diversity_hilev/bray_curtis_pc.txt,/home/cbmucl06/Combo_analysis/Beta_analysis/bray_curtis_pc.txt \
--o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procustes_analysis_hilev \
+-i /home/cbmucl06/Combo_analysis/Beta_analysis/bray_curtis_pc.txt,/home/cbmucl06/Combo_analysis/Beta_analysis/unweighted_unifrac_pc.txt \
+-o /home/cbmucl06/Combo_analysis/Beta_analysis/Procrustes_bc_uwuf \
 -r 999
 
 #Deactivating environment
