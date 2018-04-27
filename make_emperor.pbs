@@ -15,9 +15,9 @@ export TMPDIR=~/qiime_tmp
 echo "Making emperor plot"
 make_emperor.py \
 -c \
--i /home/cbmucl06/Combo_analysis/Beta_analysis/Procrustes_bc_uwuf \
+-i /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procrustes_agriculturexxx \
 -m /home/cbmucl06/Raw_data/merged_map_no_conv.tsv \
--o /home/cbmucl06/Combo_analysis/Beta_analysis/Procrustes_bc_uwuf/Plots \
+-o /home/cbmucl06/Combo_analysis/PICRUSt_analysis/Procrustes_agriculturexxx/Plots_agri \
 -b 'SampleSite'
 
 #Deactivating environment
