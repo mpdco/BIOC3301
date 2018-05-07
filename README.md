@@ -1,8 +1,8 @@
 # BIOC3301 Soil Microbiome Project
 
-This repository contains all batch script files used in the analysis of the soil microbiome of Gordon Square Gardens and of an organic farm (Lupatini et al. (2016)). The aim of this project was to determine the suitability of London soil for urban agriculture with regards to its microbiome. All bioinformatic analyses were carried out in Cartesius, the Dutch supercomputer (SURFsara).
+This repository contains all batch script files used in the analysis of the soil microbiome of Gordon Square Gardens and of an organic farm (Lupatini et al. (2016)). The aim of this project was to determine the suitability of London soil for urban agriculture with regards to its microbiome. All bioinformatic analyses were carried out in Cartesius, the Dutch supercomputer (SURFsara), except for LEfSe and initial PICRUSt analysis, which were performed in the Huttenhower lab Galaxy web server.
 
-Core diversity analysis can be run with the core_div_analysis.pbs script in order to obtain an overview of the sample compositions.
+Core diversity analysis was run with the core_div_analysis.pbs script in order to obtain an overview of the sample diversities and compositions.
 
 ## Raw Sequence Processing
   1. Join paired end reads (joining_paired_ends.pbs)
